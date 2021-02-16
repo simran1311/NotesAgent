@@ -1,0 +1,19 @@
+body{
+    background: gray;
+}
+
+.navbar-brand{
+    font-family: Chalkboard;
+}
+
+.book_list{
+    font-family: cursive,"Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    font-size: medium;
+}
+
+.image{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 250px;
+}

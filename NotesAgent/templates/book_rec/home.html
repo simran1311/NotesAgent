@@ -1,0 +1,83 @@
+{% extends 'book_rec/base.html' %}
+<head>
+    <style>
+
+    </style>
+
+</head>
+{% block title %} Notes Agents {% endblock %}
+
+{% block body %}
+
+
+<!--<form id="searchform" class="form-inline header " role="search">
+<div class="row">
+<div class="col-sm-8">
+    <input type="search" name="s" id="s" placeholder="Search" class="form-control search-field">
+</div>
+<div class="col-sm-4">
+    <button class="search-btn" type="button">Search </button>
+</div>
+</div>
+</form>></button>
+</form>-->
+
+</div>
+
+
+    <div class="row r">
+        <div  class="col s12 m6 l3 el"   ><a href="{% url 'book_rec:note_cat' %}" ><img  class="responsive-img" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/20bce1ea-cf9e-411b-96ad-2472b994876d/ddeo0mt-e07be24d-a190-4a66-9e43-c8f61ac88433.png/v1/fill/w_894,h_894,q_70,strp/notes1_by_maxmay98_ddeo0mt-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcLzIwYmNlMWVhLWNmOWUtNDExYi05NmFkLTI0NzJiOTk0ODc2ZFwvZGRlbzBtdC1lMDdiZTI0ZC1hMTkwLTRhNjYtOWU0My1jOGY2MWFjODg0MzMucG5nIiwid2lkdGgiOiI8PTEwODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.fJpjahX9ITsXWUixBgkwkzKTLZLOjaTRgsqYG-UJlxM"></a><h4 class="h">University Notes </h4> </div>
+        <div class="col s12 m6 l3 el"  ><a href="#" > <img class="responsive-img" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/20bce1ea-cf9e-411b-96ad-2472b994876d/ddern40-342095f2-5788-4f48-96db-f4145752492b.png/v1/fill/w_894,h_894,q_70,strp/q_a_a_by_maxmay98_ddern40-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcLzIwYmNlMWVhLWNmOWUtNDExYi05NmFkLTI0NzJiOTk0ODc2ZFwvZGRlcm40MC0zNDIwOTVmMi01Nzg4LTRmNDgtOTZkYi1mNDE0NTc1MjQ5MmIucG5nIiwid2lkdGgiOiI8PTEwODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.SHL5jCq-vxAhTWIJTs0TBnMaFEDtL5IvCdqG_ssKBBc" ><H4 class="h"> Question Papers </H4></div>
+        <div class="col s12 m6 l3 el" ><a href="{% url 'book_rec:books' %}" ><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/20bce1ea-cf9e-411b-96ad-2472b994876d/ddermvs-a243e9c9-2930-4ad5-956c-edcb683ffff3.png/v1/fill/w_894,h_894,q_70,strp/book1_by_maxmay98_ddermvs-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcLzIwYmNlMWVhLWNmOWUtNDExYi05NmFkLTI0NzJiOTk0ODc2ZFwvZGRlcm12cy1hMjQzZTljOS0yOTMwLTRhZDUtOTU2Yy1lZGNiNjgzZmZmZjMucG5nIiwid2lkdGgiOiI8PTEwODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.ra-FuJ_mWOEmIm6bFF6coMA5YwrMr6RJIrAPdf7hXY8" class="responsive-img"><h4 class="h">Books</h4></div>
+        <div class="col s12 m6 l3  el" ><a href="#" ><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/20bce1ea-cf9e-411b-96ad-2472b994876d/ddern6e-063b0dd9-d46b-454d-97b2-3e4e63bc44f4.png/v1/fill/w_894,h_894,q_70,strp/tie_by_maxmay98_ddern6e-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcLzIwYmNlMWVhLWNmOWUtNDExYi05NmFkLTI0NzJiOTk0ODc2ZFwvZGRlcm42ZS0wNjNiMGRkOS1kNDZiLTQ1NGQtOTdiMi0zZTRlNjNiYzQ0ZjQucG5nIiwid2lkdGgiOiI8PTEwODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.rLAcICbCR9b3MlPgL40q0QkP2pQqJE4CWJuDtIWFJL0" class="responsive-img"> <h4 class="h">Placements Content</h4></div>
+      </div>
+
+
+<footer class="panel-footer" id="footer">
+    <div class="container">
+      <div class="row">
+        <section id="hours" class="col-md-12 col-lg-4">
+          <span>Hours:</span><br>
+          Sun-Thurs: 11:15am - 10:00pm<br>
+          Fri: 11:15am - 2:30pm<br>
+          Saturday Closed
+          <hr class="visible-xs">
+        </section>
+        <section id="address" class="col-md-12 col-lg-4">
+          <span>Address:</span><br>
+          Sector – 43, Aravalli Hills, Delhi – Surajkund Road, Faridabad – 121004, <br>(Haryana), India
+
+          <hr class="visible-xs">
+        </section>
+        <section id="testimonials" class="col-md-12 col-lg-4">
+          <p>"The best Lecture notes providing site I've been to! And that's saying a lot, since I've been to many!"</p>
+          <p>"Amazing Notes! Great service! Couldn't ask for more! I'll be back again and again!"</p>
+        </section>
+      </div>
+       <div class="row r">
+      <div class="col-md-3 col-lg-2 col-sm-12 col-xs-12   text-center" id="val">
+         <a href="http://www.instagram.com/notesagents" data-toggle="tooltip"  id="social" title="Follow us on Instagram"><i class="fa fa-instagram" style="font-size:70px;color:#3b5999"></i></a>
+      </div>
+      <div class="col-md-3 col-lg-2 col-sm-12 col-xs-12   text-center" id="val">
+         <a href="#" data-toggle="tooltip" title="Mail Us"><i class="fa fa-google"  id="social" style="font-size:70px;color:Red"></i></a>
+      </div>
+<div class="col-md-3 col-lg-2 col-sm-12 col-xs-12 text-center" id="val">
+         <a href="https://t.me/Abudardakhan" data-toggle="tooltip" title="Message us"><i class="fa fa-telegram"  id="social" style="font-size:70px;color:#0077B5"></i></a>
+      </div>
+       <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12 text-center" id="val">
+         <a href="#" data-toggle="tooltip" title="Follow us on Twitter"><i class="fa fa-twitter" id="social" style="font-size:70px;color:#55acee"></i></a>
+      </div>
+
+
+             <div class="col-md-12 col-lg-2 col-sm-12 col-xs-12 text-center" id="val">
+         <a href="" data-toggle="tooltip" title="Follow us on Linkedin" ><i class="fa fa-linkedin"  id="social" style="font-size:70px;color:#1ab7ea"></i></a>
+
+</div>
+
+      </div>
+
+      <div class="text-center">&copy; Copyright Notes Agents 2019</div>
+    </div>
+  </footer>
+
+{% endblock %}

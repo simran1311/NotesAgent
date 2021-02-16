@@ -1,0 +1,10 @@
+
+{% extends 'book_rec/base.html' %}
+{% block title %}{{ book.name }}{% endblock %}
+{% block body %}
+<img class="image" src="{{ book.book_p.url }}">
+
+<h1>{{ book.name }}</h1>
+<h2>{{ book.author }}</h2>
+
+{% endblock %}

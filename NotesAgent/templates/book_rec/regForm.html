@@ -1,0 +1,39 @@
+{% extends 'book_rec/base.html' %}
+<style>
+    .panel-body{
+        display:content;
+
+    }
+</style>
+
+
+{% block title %}Registration{% endblock %}
+
+{% block body %}
+<body class="background">
+    <div class="container-fliud">
+    <div class="row">
+        <div class="col-sm-12 col-sm-7">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>Create new Account</h3>
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+                <form class="form-horizontal" role="form" action="" method="post">
+                    {% csrf_token %}
+                    {% include 'book_rec/form-template.html' %}
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-success">Submit</button>
+                            </div>
+                        </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+{% endblock %}

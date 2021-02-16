@@ -1,0 +1,36 @@
+{% extends 'book_rec/base.html' %}
+
+{% block title %}Add Book{% endblock %}
+<style>
+
+</style>
+
+{% block body %}
+
+    <div class="container-fliud">
+    <div class="row"  align="center">
+        <div  align="center">
+            <div class="panel panel-default ">
+
+                <div class="panel-body">
+
+                    <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% include 'book_rec/form-template.html' %}
+
+                        <div align="center" class="form-group" align="center">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-success">Submit</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+                <div class="col-lg-6"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}

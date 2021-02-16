@@ -1,0 +1,94 @@
+{% extends 'book_rec/base.html' %}
+{% block title %}Books{% endblock %}
+ <style type="text/css">
+    .book {
+padding: 15px 0 0 0;
+margin:auto;
+width:100px;
+height:100px;
+}
+.book-img>.book-link:before {
+content: '';
+display: block;
+width: 80%;
+height: 1em;
+background: rgba(0,0,0,.85);
+border-radius: 50%;
+position: absolute;
+bottom:-10px;
+-webkit-filter: blur(5px);
+filter: blur(5px);
+z-index:-5;
+}
+.shelf {
+border-bottom: 30px solid #a5a5a5;
+border-left: 20px solid transparent;
+border-right: 20px solid transparent;
+top: -15px;
+z-index: -10;
+}
+.shelf:after {
+content: '';
+background: #333333;
+height: 20px;
+width: calc(100% + 40px);
+position: absolute;
+top: 30px;
+left: 0;
+right: 0;
+z-index: 1;
+margin: 0 -20px;
+}
+  </style>
+  <script type="text/javascript">
+      function addBook() {
+ var body = document.getElementById("body").value;
+ var div = document.createElement('div');
+
+ var a=document.createElement('a');
+div.setAttribute('class', 'col-xs-4 col-md-2 book-img');
+a.setAttribute('href','link');
+a.setAttribute('class','book-link');
+var image=document.createElement('img');
+image.setAttribute('src','img-src');
+image.setAttribute('class','img-responsive book');
+a.appendChild(image);
+div.appendChild(a);
+}
+
+  </script>
+{% block body %}
+    {% if all_books %}
+
+
+            {% for book in all_books %}
+<div class="col-lg-3 col-xs-6 col-md-4 col-sm-3 image-hover-text-container">
+         <div class="col-xs-12 image-hover-image" ><a href="{{ book.book_url }}" class="book-link "><img src="{{ book.book_p.url }}" class="img-responsive book"></a></div>
+ <div class="image-hover-text">
+    <div class="image-hover-text-bubble">
+      <span class="image-hover-text-title"></span>
+    " {{ book.name }} "<br>      {{ book.author }} <br> <a href="{{ book.book_url }}" class="book-link "><i class="material-icons bottom medium">cloud_download</i></a>
+    </div>
+  </div>
+          <div class="col-lg-12 col-xs-12 col-md-12 col-sm-12  shelf">
+             </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+            {% endfor %}
+
+    {% else %}
+        <h3>No Books Availaible</h3>
+    {% endif %}
+
+
+{% endblock %}

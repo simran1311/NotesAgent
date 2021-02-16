@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GPA CALCULATOR</title>
+	<style type="text/css">
+	table {
+    border-collapse: collapse;
+	height: 100%
+    width: 100%;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+}
+thead
+{
+	background-color: #1C2833;
+}
+
+tr:nth-child(even){background-color: #2E86C1}
+
+th {
+    background-color: #1C2833 ;
+    color: white;
+}
+.button {
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 6px;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+
+	<script type="text/javascript">
+		
+
+ function A()
+ {
+ 	var Grade= new Array(10);
+ 	var Credit= new Array(10);
+    var i=1;
+ 	var x=0;
+ 	var y=0;
+ 	var sg=0;
+ 	var sc=0;
+ 	var gpa;
+ 	while(x!=-1)
+ 	{
+ 		var val="g"+i;
+ 		var cre="c"+i;
+ 		 var selector =document.getElementById(val);
+    x= parseInt(selector[selector.selectedIndex].value);
+ 		  y=parseInt(document.getElementById(cre).value);
+ 		  Grade[i-1]=x;
+ 		  Credit[i-1]=y;
+   
+      console.log(Grade[i-1]);
+      console.log(Credit[i-1])
+     i++;
+ 	}
+ 	i=0;
+ 	while(Grade[i]!=-1)
+ 	{
+ 		sg=sg+Grade[i]*Credit[i];
+ 		sc=sc+Credit[i];
+ 		i++;
+
+ 	}
+ 	gpa=sg/sc;
+ 	document.getElementById('write').innerHTML="Calculated GPA="+gpa;
+ }
+
+	</script>
+</head>
+<body>
+<table  id="example" class="display" style="width:100%">
+	 <thead>
+            <tr>
+                <th>Subjects</th>
+                <th>Grade Point</th>
+                <th>Credits</th>
+                
+            </tr>
+        </thead>
+         <tbody>
+            <tr>
+                <td>Subject1</td>
+               
+               
+                <td><select size="1" id="g1" name="row-1-grade">
+                    <option type="number" value="-1" selected="selected">
+                        AP
+                    </option>
+                    <option value="0">
+                        ABS
+                    </option>
+                    <option value="0">
+                        F
+                    </option>
+                    <option value="4">
+                        P
+                    </option>
+                    <option value="5">
+                        C
+                    </option>
+                    <option value="6" >
+                        B
+                    </option>
+                    <option value="7">
+                        B+
+                    </option>
+                    <option value="8">
+                        A
+                    </option>
+                   
+                    <option value="9">
+                        A+
+                    </option>
+                     <option value="10">
+                        O
+                    </option>
+
+                </select></td>
+                 <td><input type="number" id="c1" name="row-1-credit" min="1" max="5"></td>
+            </tr>
+            <tr>
+                <td>Subject2</td>
+               
+               
+                <td><select size="1" id="g2" name="row-2-grade">
+                    <option value="-1" selected="selected"  >
+                        AP
+                    </option>
+                    <option value="0">
+                        ABS
+                    </option>
+                    <option value="0">
+                        F
+                    </option>
+                    <option value="4">
+                        P
+                    </option>
+                    <option value="5">
+                        C
+                    </option>
+                    <option value="6" >
+                        B
+                    </option>
+                    <option value="7">
+                        B+
+                    </option>
+                    <option value="8">
+                        A
+                    </option>
+                   
+                    <option value="9">
+                        A+
+                    </option>
+                     <option value="10">
+                        O
+                    </option>
+
+                </select></td>
+                 <td><input type="number" id="c2" name="row-2-credit" min="1" max="5"></td>
+            </tr>
+            <tr>
+                <td>Subject3</td>
+               
+               
+                <td><select size="1" id="g3" name="row-3-grade">
+                    <option value="-1" selected="selected" >
+                        AP
+                    </option>
+                    <option value="0">
+                        ABS
+                    </option>
+                    <option value="0">
+                        F
+                    </option>
+                    <option value="4">
+                        P
+                    </option>
+                    <option value="5">
+                        C
+                    </option>
+                    <option value="6" >
+                        B
+                    </option>
+                    <option value="7">
+                        B+
+                    </option>
+                    <option value="8">
+                        A
+                    </option>
+                   
+                    <option value="9">
+                        A+
+                    </option>
+                     <option value="10">
+                        O
+                    </option>
+
+                </select></td>
+                 <td><input type="number" id="c3" name="row-3-credit" min="1" max="5"></td>
+            </tr>
+            <tr>
+                <td>Subject4</td>
+               
+               
+                <td><select size="1" id="g4" name="row-4-grade">
+                    <option value="-1" selected="selected"  >
+                        AP
+                    </option>
+                    <option value="0">
+                        ABS
+                    </option>
+                    <option value="0">
+                        F
+                    </option>
+                    <option value="4">
+                        P
+                    </option>
+                    <option value="5">
+                        C
+                    </option>
+                    <option value="6" >
+                        B
+                    </option>
+                    <option value="7">
+                        B+
+                    </option>
+                    <option value="8">
+                        A
+                    </option>
+                   
+                    <option value="9">
+                        A+
+                    </option>
+                     <option value="10">
+                        O
+                    </option>
+
+                </select></td>
+                 <td><input type="number" id="c4" name="row-4-credit" min="1" max="5"></td>
+            </tr>
+            <tr>
+                <td>Subject5</td>
+               
+               
+                <td><select size="1" id="g5" name="row-5-grade">
+                    <option value="-1" selected="selected" >
+                        AP
+                    </option>
+                    <option value="0">
+                        ABS
+                    </option>
+                    <option value="0">
+                        F
+                    </option>
+                    <option value="4">
+                        P
+                    </option>
+                    <option value="5">
+                        C
+                    </option>
+                    <option value="6" >
+                        B
+                    </option>
+                    <option value="7">
+                        B+
+                    </option>
+                    <option value="8">
+                        A
+                    </option>
+                   
+                    <option value="9">
+                        A+
+                    </option>
+                     <option value="10">
+                        O
+                    </option>
+
+                </select></td>
+                 <td><input type="number" id="c5" name="row-5-credit" min="1" max="5"></td>
+            </tr>
+            <tr>
+                <td>Subject6</td>
+               
+               
+                <td><select size="1" id="g6" name="row-6-grade">
+                    <option value="-1" selected="selected" >
+                        AP
+                    </option>
+                    <option value="0">
+                        ABS
+                    </option>
+                    <option value="0">
+                        F
+                    </option>
+                    <option value="4">
+                        P
+                    </option>
+                    <option value="5">
+                        C
+                    </option>
+                    <option value="6" >
+                        B
+                    </option>
+                    <option value="7">
+                        B+
+                    </option>
+                    <option value="8">
+                        A
+                    </option>
+                   
+                    <option value="9">
+                        A+
+                    </option>
+                     <option value="10">
+                        O
+                    </option>
+
+                </select></td>
+                 <td><input type="number" id="c6" name="row-6-credit" min="1" max="5"></td>
+            </tr>
+            <tr>
+                <td>Subject7</td>
+               
+               
+                <td><select size="1" id="g7" name="row-7-grade">
+                    <option value="-1" selected="selected" >
+                        AP
+                    </option>
+                    <option value="0">
+                        ABS
+                    </option>
+                    <option value="0">
+                        F
+                    </option>
+                    <option value="4">
+                        P
+                    </option>
+                    <option value="5">
+                        C
+                    </option>
+                    <option value="6" >
+                        B
+                    </option>
+                    <option value="7">
+                        B+
+                    </option>
+                    <option value="8">
+                        A
+                    </option>
+                   
+                    <option value="9">
+                        A+
+                    </option>
+                     <option value="10">
+                        O
+                    </option>
+
+                </select></td>
+                 <td><input type="number" id="c7" name="row-7-credit" min="1" max="5"></td>
+            </tr>
+            <tr>
+                <td>Subject8</td>
+               
+               
+                <td><select size="1" id="g8" name="row-8-grade">
+                    <option value="-1" selected="selected" >
+                        AP
+                    </option>
+                    <option value="0">
+                        ABS
+                    </option>
+                    <option value="0">
+                        F
+                    </option>
+                    <option value="4">
+                        P
+                    </option>
+                    <option value="5">
+                        C
+                    </option>
+                    <option value="6" >
+                        B
+                    </option>
+                    <option value="7">
+                        B+
+                    </option>
+                    <option value="8">
+                        A
+                    </option>
+                   
+                    <option value="9">
+                        A+
+                    </option>
+                     <option value="10">
+                        O
+                    </option>
+
+                </select></td>
+                 <td><input type="number" id="c8" name="row-8-credit" min="1" max="5"></td>
+            </tr>
+            <tr>
+                <td>Subject9</td>
+               
+               
+                <td><select size="1" id="g9" name="row-9-grade">
+                    <option value="-1" selected="selected" >
+                        AP
+                    </option>
+                    <option value="0">
+                        ABS
+                    </option>
+                    <option value="0">
+                        F
+                    </option>
+                    <option value="4">
+                        P
+                    </option>
+                    <option value="5">
+                        C
+                    </option>
+                    <option value="6" >
+                        B
+                    </option>
+                    <option value="7">
+                        B+
+                    </option>
+                    <option value="8">
+                        A
+                    </option>
+                   
+                    <option value="9">
+                        A+
+                    </option>
+                     <option value="10">
+                        O
+                    </option>
+
+                </select></td>
+                 <td><input type="number" id="c9" name="row-9-credit" min="1" max="5"></td>
+            </tr>
+            <tr>
+                <td>Subject10</td>
+               
+               
+                <td><select size="1" id="g10" name="row-10-grade">
+                    <option value="-1" selected="selected" >
+                        AP
+                    </option>
+                    <option value="0">
+                        ABS
+                    </option>
+                    <option value="0">
+                        F
+                    </option>
+                    <option value="4">
+                        P
+                    </option>
+                    <option value="5">
+                        C
+                    </option>
+                    <option value="6" >
+                        B
+                    </option>
+                    <option value="7">
+                        B+
+                    </option>
+                    <option value="8">
+                        A
+                    </option>
+                   
+                    <option value="9">
+                        A+
+                    </option>
+                     <option value="10">
+                        O
+                    </option>
+
+                </select></td>
+                 <td><input type="number" id="c10" name="row-10-credit" min="1" max="5"></td>
+            </tr>
+           
+        </tbody>
+        
+</table>
+<button onclick="A()">Calculate</button>
+<div id="write"></div>
+</body>
+</html>

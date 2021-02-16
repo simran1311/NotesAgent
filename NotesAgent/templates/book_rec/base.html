@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Notes Agents{% endblock %}</title>
+    {% load staticfiles %}
+
+    <style>
+    .q
+    {
+        color:black;
+        font-size:1.2em;
+    }
+     .header{
+            height:100%;
+            background:url("https://images.pexels.com/photos/2115217/pexels-photo-2115217.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            background-size: cover;
+            background-position: center;
+            display:flex;
+            justify-content : center;
+            align-items: center;
+        }
+
+    .main_box{
+        width: 100%;
+        border: double;
+        border-color:rgba(0,0,0,0.5);
+        align-content: center;
+        display: block;
+        justify-content : center;
+        align-items: center;
+        align-content: center;
+        background-color: #ffecb3;
+
+    }
+    .n_img{
+        height:100%;
+        background-size: cover;
+        background-position: center;
+        display:flex;
+        justify-content : center;
+        align-items: center;
+        background-image:url("https://www.pexels.com/photo/macbook-pro-on-brown-wooden-table-2312369/");
+    }
+    #ss{
+
+    }
+
+    .cs{
+        height:70px;
+        padding:10px;
+    }
+
+    .z-depth-1{
+         /*background-color: #e2e8f0;*/
+    }
+    .row{
+        display: Block;
+        margin-top:100px;
+    }
+
+    .list_sub{
+         height:150%;
+        display: Block;
+        font-size: 50%;
+    }
+    .collapsible-header{
+        background-color:rgba(0,0,0,0.5);
+    }
+    .collapsable-body{
+        background-color:black;
+        width:250%;
+        height:auto;
+    }
+    .size{
+        width:auto;
+        height:auto;
+        background-color:rgba(0,0,0,0.5);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .form-horizontal
+    {
+        color:black;
+        font-size:60%;
+    }
+    #form
+    {
+        font-size:120%;
+    }
+.image-hover-text-container
+{
+  position: relative;
+  display: inline-block;
+
+  width: auto;
+  height: auto;
+  transition: all 0.2s linear;
+}
+
+
+.image-hover-image
+{
+ display: block;
+}
+
+.image-hover-image img
+{
+  border-radius: 10%;
+
+  height: 200px;
+}
+
+
+
+.image-hover-text
+{
+  position: absolute;
+  top: 0;
+  color:black;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  opacity: 0;
+  cursor: default;
+  transition: opacity 0s linear;
+}
+.image-hover-text:hover
+{
+  opacity: 3;
+}
+
+
+.image-hover-text-bubble
+{
+  position: relative;
+  box-sizing: border-box;
+  top: 0; left: 0; right: 100%;
+  height: 250px;
+  text-align: center;
+  background: rgba(218, 211, 211, 0.9);
+  border: 1px solid #848484;
+  border-radius: 10%;
+  margin: 0 auto;
+  padding: 5px 5px 5px 5px;
+  overflow: hidden;
+  font-size: 20px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.image-hover-text .image-hover-text-title
+{
+  font-size: 25px;
+  display: block;
+}
+
+
+
+
+
+    nav ul li:hover {
+    background-color: white;
+    }
+   .header{
+            height:100%;
+            background:url("https://images.pexels.com/photos/2115217/pexels-photo-2115217.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            background-size: cover;
+            background-position: center;
+            display:flex;
+            justify-content : center;
+            align-items: center;
+        }
+        h1{
+            color:black;
+
+            font-size:75%;
+            letter-spacing:1px;
+            text-align:center;
+        }
+        .search-field{
+            height: 100%;
+            width:100%;
+            padding:10px;
+            background:#ffffff;
+            border:none;
+            border-radius:25px;
+            outline:none;
+        }
+        #searchform .form-control,
+#searchform .btn-default {
+    background:white;
+  width:100%;
+}
+        .search-btn{
+            height:100%;
+            width:100%;
+            background:#ffeb3b;
+            border:none;
+            font-size:100%;
+            color:#000;
+            border-radius:25px;
+        }
+        .search-btn:hover{
+            background:#ffc107;
+            cursor:pointer;
+        }
+        .form-box{
+            background:rgba(0,0,0,0.5);
+            padding:10px;
+            width:100%;
+            display:inline-block;
+
+        }
+
+.img1
+{
+    width:100%;
+    height:40%;
+}
+.el
+{
+    margin-left:10px;
+}
+
+
+.nav, .navbar-nav
+{
+    height:30%;
+    width:30%;
+    font-size:40%;
+}
+.form-horizontal{
+    background:#006064;
+}
+
+.panel
+{
+    height:400px;
+    color:black;
+}
+#footer
+{
+    background:black;
+}
+.panel-footer {
+
+  margin-top: 50px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+
+  border-top: 0;
+}
+.panel-footer div.row {
+    background:Black;
+  margin-bottom: 35px;
+}
+#hours, #address {
+  line-height: 2;
+  font-size:0.5em;
+}
+section
+{
+    color:white;
+    font-size:0.5em;
+}
+#val
+{
+    background:black;
+}
+#hours > span, #address > span {
+  font-size: 1.4em;
+}
+li.a
+{
+    font-size:1.5em;
+}
+#address p {
+  color: #557c3e;
+  font-size: 0.5em;
+  line-height: 0.5em;
+}
+#testimonials {
+  font-style: italic;
+}
+#testimonials p:nth-child(2) {
+  margin-top: 25px;
+}
+.image
+{
+    margin-bottom:50px;
+}
+
+
+.bodycal{
+    color:White;
+    background:Gray;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:auto;
+    padding: 0px;
+    align-content:center;
+    background-attachment: fixed;
+    height:500px;
+}
+
+ .book {
+padding: 15px 0 0 0;
+margin:auto;
+}
+
+.book-img>.book-link:before {
+content: '';
+display: block;
+width: 80%;
+height: 80%;
+background: rgba(0,0,0,.85);
+border-radius: 50%;
+position: absolute;
+bottom:-10px;
+-webkit-filter: blur(5px);
+filter: blur(5px);
+z-index:-5;
+}
+.shelf {
+border-bottom: 30px solid #a8865d;
+border-left: 20px solid transparent;
+border-right: 20px solid transparent;
+top: -15px;
+z-index: -10;
+}
+.shelf:after {
+content: '';
+background: #4a3a28;
+height: 20px;
+width: calc(100% + 40px);
+position: absolute;
+top: 30px;
+left: 0;
+right: 0;
+z-index: 1;
+margin: 0 -20px;
+}
+
+
+
+.col{
+        max-width:100%;
+        height :70%;
+        background-color: #e0f2f1 ;
+        padding: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.5s;
+
+}
+.h{
+        font-size: 30px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: center;
+        color:#4a148c;
+}
+body
+{   padding: 0;
+    margin: 0;
+
+}
+
+.book_list{
+    font-family: cursive,"Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    font-size: medium;
+}
+
+
+.image{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 250px;
+}
+.nav-wrapper {
+    background-color: #37474f;
+    font-size: 14px;
+    font-weight: bold;
+    color: #90a4ae ;
+
+  }
+  @media (min-width: 1200px) {
+.navbar-brand h1 {
+    color:#000000;
+    font-size: 1.5em;}
+h2 { font-size: 1.3em; }
+h3 { font-size: 1.2em; }
+.form-inline, .header{
+            height:100%;
+            background:url('https://www.pexels.com/photo/macbook-pro-on-brown-wooden-table-2312369/');
+            background-size: cover;
+            background-position: center;
+            display:flex;
+            justify-content : center;
+            align-items: center;
+        }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+.navbar-brand h1 {
+     color:#000000;
+    font-size: 1em;}
+h2 { font-size: 1em; }
+h3 { font-size: 1em; }
+.header{
+            height:100%;
+            background:url("https://www.pexels.com/photo/macbook-pro-on-brown-wooden-table-2312369/");
+            background-size: cover;
+            background-position: center;
+            display:flex;
+            justify-content : center;
+            align-items: center;
+        }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+.navbar-brand h1 {
+    color:#000000;
+    font-size: 1em;}
+h2 { font-size: 1em; }
+h3 { font-size: 1em; }
+ul.nav.nav-tab.hidden-lg
+{
+height:20%;
+  width: 100%;
+}
+
+.header{
+            height:100%;
+            background:url("https://www.pexels.com/photo/macbook-pro-on-brown-wooden-table-2312369/");
+            background-size: cover;
+            background-position: center;
+            display:flex;
+            justify-content : center;
+            align-items: center;
+        }
+
+}
+
+@media (max-width: 767px) {
+.navbar-brand h1 {font-size: 1em;}
+h2 { font-size: 1em; }
+h3 { font-size: 1em; }
+}
+  nav ul li:hover {
+   background-color: gray;
+}
+.material-icons
+{
+    font-size:18px;
+}
+.container {
+    padding-top:auto;
+    padding-bottom:auto;
+  padding-right: 4%;
+  padding-left: 1.3em;
+  margin-right: auto;
+  margin-left: auto;
+}
+li.dropdown
+{
+    font-size:150%;
+}
+a
+{
+    font-size:200%;
+}
+.navbar-nav:before
+{
+    font-size:100px;
+}
+.navbar
+{
+    justify-content:center;
+    height:100%;
+    width:100%;
+}
+a.brand-logo{
+    text-decoration:none;
+    color: red;
+}
+.dropdown-toggle
+{
+    width:100px;
+    height:100px;
+}
+.nav
+{
+
+     background-color: #222222;
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height:100%;
+}
+
+.container {
+  padding: 0 16px;
+}
+html, body, {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+.about:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+a.navbar-brand
+{
+    float:clear;
+    font-size:200%;
+}
+a.dropdown-toggle
+{
+    font-size:300%;
+}
+    </style>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}book_rec/style.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <script type = "text/javascript"
+
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="js/jquery-2.1.4.min.js"></script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems, options);
+  });
+    $('.enter_link').click(function() {
+        $(this).parent().fadeOut(500);
+ });
+
+
+
+</script>
+
+{% block head %}
+
+{% endblock %}
+
+
+</head>
+
+
+<header>
+ <ul id="dropdown1" class="dropdown-content">
+  <li><a href="{% url 'book_rec:login' %}">Login</a></li>
+  <li><a href="{% url 'book_rec:register' %}">Signup</a></li>
+</ul>
+
+
+<ul id="dropdown2" class="dropdown-content">
+    <li><a id="notes" href="{% url 'book_rec:note_cat' %}">Notes</a></li>
+  <li><a id="books" href="{% url 'book_rec:books' %}">Books</i></a></li>
+  <li><a id="addbooks" href="{% url 'book_rec:BookAdd' %}">Add Books</a></li>
+  <li><a  href = "{% url 'book_rec:register' %}"  >User Login</a></li>
+
+</ul>
+
+<div class="navbar-fixed hidden-xs hidden-md hidden-sm">
+    <nav>
+    <div class="nav-wrapper">
+     <a href="{% url 'book_rec:home' %}" class="brand-logo">Notes Agents</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="{% url 'book_rec:note_cat' %}">Notes<i class="material-icons right">note</i></a></li>
+        <li><a href="{% url 'book_rec:category' %}">Books<i class="material-icons right">chrome_reader_mode</i></a></li>
+        <li><a href="{% url 'book_rec:BookAdd' %}">Add Books<i class="material-icons right">add</i></a></li>
+        <li><a href="{% url 'book_rec:gpa' %}">GPA<i class="material-icons right">school</i></a></li>
+        <li><a href="{% url 'book_rec:about' %}">About Us<i class="material-icons right">group</i></a></li>
+        <li><a class = "btn dropdown-button" href = "{% url 'book_rec:register' %}" data-activates = "dropdown1" >User Login<i class="material-icons right">account_circle</i></a></li>
+      </ul>
+     </div>
+  </nav>
+</div>
+
+<!--<nav class="navbar navbar-inverse visible-md visible-sm visible-xs">
+
+    <div class="navbar-header">
+         <a class="navbar-brand" href="{% url 'book_rec:home' %}">Notes Agents</a>
+    </div>
+<ul class="nav navbar-nav">
+  <li class="dropdown ">
+    <a class="dropdown-toggle " data-toggle="dropdown" href="{% url 'book_rec:home' %}">Menu<i class="material-icons right">view_module</i>
+    <span class="caret"></span></a>
+
+    <ul class="dropdown-menu">
+       <li><a href="{% url 'book_rec:notes' %}">Notes<i class="material-icons right">note</i></a></li>
+        <li><a href="{% url 'book_rec:books' %}">Books<i class="material-icons right">chrome_reader_mode</i></a></li>
+        <li><a href="{% url 'book_rec:BookAdd' %}">Add Books<i class="material-icons right">add</i></a></li>
+         <li><a href="{% url 'book_rec:login' %}">Login<i class="material-icons right">account_circle</i></a></li>
+  <li><a href="{% url 'book_rec:register' %}">Signup<i class="material-icons right">person_add</i></a></li>
+    </ul>
+  </li>
+
+</ul>
+</nav>-->
+<nav class="navbar navbar-inverse hidden-lg">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <div class="icon-bar"></div>
+        <div class="icon-bar"></div>
+        <div class="icon-bar"></div>
+      </button>
+      <a class="navbar-brand" href="{% url 'book_rec:home' %}">Notes Agents</a>
+    </div>
+    <div class="collapse navbar-collapse " id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="{% url 'book_rec:home' %}">Home</a></li>
+                <li><a href="{% url 'book_rec:notes' %}">Notes</a></a></li>
+        <li><a href="{% url 'book_rec:books' %}">Books</a></li>
+        <li><a href="{% url 'book_rec:BookAdd' %}">Add Books</a></li>
+         <li><a href="{% url 'book_rec:gpa' %}">GPA</a></li>
+         <li><a href="{% url 'book_rec:about' %}">About Us</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'book_rec:register' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="{% url 'book_rec:login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+</header>
+
+<body class="bodycal">
+
+
+
+{% block body %}
+
+
+
+{% endblock %}
+
+
+</body>
+</html>

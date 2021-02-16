@@ -1,0 +1,37 @@
+{% extends 'book_rec/base.html' %}
+
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+
+    <div class="container-fliud">
+    <div class="row">
+        <div class="col-sm-12 col-sm-7">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>Enter Details</h3>
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+                <form class="form-horizontal" id="form" role="form" action="" method="post">
+                    {% csrf_token %}
+                    User-name:
+                    <input type= "text" name="username" placehlder="username"><br>
+                    Password:
+                    <input type= "password" name="password" placehlder="password"><br>
+
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-success">Submit</button>
+                            </div>
+                        </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}
